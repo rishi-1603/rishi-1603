@@ -966,6 +966,18 @@ Currently expanding my knowledge in:
 
 # Contribution Activity
 
+---
+
+# Contribution Snake
+
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/rishi-1603/rishi-1603/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake Animation"/>
+
+</p>
+
+---
+
 <div align="center">
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=rishi-1603&theme=tokyo-night&hide_border=true"/>
