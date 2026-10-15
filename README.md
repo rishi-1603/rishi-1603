@@ -516,199 +516,86 @@ Built scalable data applications with interactive user interfaces and AI capabil
 
 # Featured Projects
 
+> Each project ships with a live demo, automated tests, and documentation where
+> every claim maps to code. Interview prep packs inside each repo.
+
 <details open>
 
-<summary><h2>🛒 E-Commerce Sales & Customer Analytics Platform</h2></summary>
+<summary><h2>🛡️ Zomato Refund & Fraud Analytics — risk triage console</h2></summary>
 
-### Overview
+**The question:** who should a fraud team investigate first — without punishing genuine customers?
 
-An end-to-end analytics platform designed to transform raw transactional data into actionable business intelligence through advanced SQL analytics, customer segmentation, machine learning, and interactive dashboards.
+| | |
+|---|---|
+| **Live** | https://zomato-refund-fraud-analytics-3xu24nq5hwbml78hkyirje.streamlit.app/ |
+| **Repo** | https://github.com/rishi-1603/zomato-refund-fraud-analytics |
+| **Stack** | Python · Pandas · Scikit-learn · Streamlit · Plotly · SQL |
+| **Tests** | 70 automated tests · CI green |
 
----
-
-| Category | Details |
-|-----------|---------|
-| **Tech Stack** | Python • PostgreSQL • SQL • Scikit-Learn • Power BI • Tableau • Plotly |
-| **Dataset Scale** | 12,000+ Orders • 2,000+ Customers • 3 Years of Sales Data |
-| **ML Models** | Random Forest • K-Means Clustering • PCA |
-| **Business Metrics** | ₹55.9M Revenue • 55.4% Gross Margin |
-| **Deployment** | Interactive Dashboards |
-| **Repository** | 🔗 https://github.com/rishi-1603 |
-
----
-
-### Key Features
-
-- Built a complete analytics pipeline from raw data ingestion to executive dashboards.
-- Performed advanced SQL analysis using joins, aggregations, CTEs, and window functions.
-- Developed customer segmentation using RFM Analysis and K-Means clustering.
-- Built a Random Forest model to predict customer churn.
-- Forecasted future revenue using time-series techniques.
-- Designed interactive dashboards for business stakeholders.
-
----
-
-### Business Impact
-
-- Processed over **12,000 customer transactions**
-- Segmented customers into **8 business groups**
-- Identified **Champion** and **At-Risk** customers
-- Improved customer retention decision-making through predictive analytics
+- Built a 4-signal refund-abuse risk score across **45,584 delivery orders**, flagging 279 customers holding **38.78% of refund exposure** — validated against recovered ground truth at **100% top-tier precision, 0.94 in-pool AUC**.
+- Quantified a **56% coverage gap** in the eligibility funnel and identified **113 flags (40.5%) as false-positive candidates** via volume-band baseline normalization.
+- Reconciled all 8 headline KPIs across independent Python and SQL implementations with **zero discrepancies**; stress-tested score weights (Spearman ρ > 0.95 under all alternatives).
+- **Honest by design:** a risk score is not proof of fraud — false positives are published, not hidden.
 
 </details>
 
 ---
 
-<details>
+<details open>
 
-<summary><h2>💰 Repay Master — AI Loan Repayment Planner</h2></summary>
+<summary><h2>📊 E-Commerce Sales & Customer Analytics — decision layer, not just dashboards</h2></summary>
 
-### Overview
+**The question:** is the business growing, who is about to leave, and what should we do next?
 
-An AI-powered financial planning application that generates personalized loan repayment strategies using Google Gemini while providing interactive financial visualizations.
+| | |
+|---|---|
+| **Live** | https://ecomanalytics-dashboard.vercel.app/ |
+| **Repo** | https://github.com/rishi-1603/E_commerce-Sales-and-Data-Analytics |
+| **Stack** | Python · PostgreSQL · SQL · Scikit-learn · Holt-Winters · Chart.js |
+| **Tests** | 60 automated tests · CI green |
 
----
-
-| Category | Details |
-|-----------|---------|
-| **Tech Stack** | Python • Streamlit • Plotly • Google Gemini API |
-| **AI Model** | Gemini 1.5 Flash |
-| **Deployment** | Streamlit Web Application |
-| **Visualization** | Plotly Dashboards |
-| **Repository** | 🔗 YOUR_REPO_LINK |
-
----
-
-### Key Features
-
-- AI-generated repayment recommendations
-- Debt-to-income affordability scoring
-- EMI comparison dashboards
-- Cash-flow visualization
-- Dual currency support (INR/USD)
-- Interactive financial planning interface
-
----
-
-### Highlights
-
-- Integrated Google Gemini for personalized recommendations
-- Built affordability scoring algorithms
-- Tested with real users and refined recommendation quality
-- Delivered intuitive financial insights through interactive charts
+- End-to-end product over **12,000 orders / 1,991 customers / 150 SKUs**: RFM + K-Means, cohort retention, BCG matrix, CLV, forecasting with bootstrap CIs — 60 tests pin every dashboard figure to the pipeline.
+- Rebuilt the churn model to be **leakage-free** (forward-time split, label = no purchase in next 180 days) after catching the original target leakage — the honest 5-fold CV AUC is **0.65**, backed by a gains/lift chart for campaign targeting.
+- Decision layer: MoM decomposition (Dec 2024: revenue **+17.0%**, orders **+21.3%**, AOV **−3.5%** → volume-led growth), 18-cohort retention (month-1: 15–28% in 2023 → 55–88% late 2024), and a statistically powered win-back experiment design (MDE +13pp on a 34.5% baseline).
+- NL-to-SQL assistant where **the LLM never computes numbers** — results come from the database only.
 
 </details>
 
 ---
 
-<details>
+<details open>
 
-<summary><h2>📈 E-Commerce Recommendation System</h2></summary>
+<summary><h2>🏥 HealthGuard AI — explainable healthcare analytics with model-honesty audit</h2></summary>
 
-### Overview
+**The question:** which patients are at higher risk, why — and can the model's headline metric be trusted at all?
 
-A recommendation engine designed to improve product discovery by analyzing customer behavior and generating personalized product suggestions.
+| | |
+|---|---|
+| **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
+| **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
+| **Stack** | Python · Scikit-learn · SHAP · Streamlit · Docker · CI |
+| **Tests** | 44 automated tests · CI green |
 
----
-
-| Category | Details |
-|-----------|---------|
-| **Tech Stack** | Python • Pandas • NumPy • Scikit-Learn |
-| **Focus** | Recommendation System |
-| **Domain** | Retail Analytics |
-| **Repository** | 🔗 YOUR_REPO_LINK |
-
----
-
-### Key Features
-
-- Product recommendation engine
-- Customer preference analysis
-- Data preprocessing pipeline
-- Recommendation generation
-- Exploratory Data Analysis
-
----
-
-### Skills Demonstrated
-
-- Machine Learning
-- Recommendation Systems
-- Data Processing
-- Feature Engineering
-- Model Evaluation
+- Readmission-risk pipeline over 984 patient records with **per-patient SHAP explanations in the UI**, cohort-level driver analysis, and fairness slices by age group and gender.
+- **The honesty audit is the headline:** the model reports AUC 0.994 — and a model card + audit prove a lookup-table baseline already scores 0.929 (demographics-only: 0.985), because the synthetic generator makes the label near-deterministic. Real clinical models score 0.65–0.75, and every surface says so.
+- Grounded Q&A where every numeric answer is computed from the dataset and CI-tested — unknown questions are refused, not guessed.
+- Operational finding framed honestly: readmitted patients hold **43.8% of total cost** at a +112% cost premium — association, not causation.
 
 </details>
 
 ---
 
-<details>
+### More projects
 
-<summary><h2>⏰ Alarm Clock Application</h2></summary>
-
-### Overview
-
-A desktop application developed using Python and Tkinter that allows users to schedule alarms with a clean graphical interface.
-
----
-
-| Category | Details |
-|-----------|---------|
-| **Tech Stack** | Python • Tkinter |
-| **Type** | Desktop Application |
-| **Repository** | 🔗 YOUR_REPO_LINK |
-
----
-
-### Features
-
-- 24-hour time format
-- GUI interface
-- Alarm scheduling
-- User-friendly design
-- Real-time clock updates
-
----
-
-### Skills Demonstrated
-
-- Python Programming
-- GUI Development
-- Event Handling
-- Application Design
-
-</details>
-
----
-
-<details>
-
-<summary><h2>🏦 JPMC Quantitative Research Virtual Experience</h2></summary>
-
-### Overview
-
-Completed a quantitative research simulation focused on financial data analysis, business insights, and analytical problem-solving.
-
----
-
-| Category | Details |
-|-----------|---------|
-| **Organization** | JPMorgan Chase & Co. |
-| **Platform** | Forage |
-| **Focus** | Quantitative Research |
-| **Repository** | 🔗 YOUR_REPO_LINK |
-
----
-
-### Key Learnings
-
-- Financial data analysis
-- Business problem solving
-- Quantitative research
-- Professional reporting
-- Data-driven decision making
-
-</details>
+| Project | What it shows |
+|---|---|
+| [Repay Master](https://github.com/rishi-1603/Repay-Master) | AI loan-repayment planner (Streamlit + Gemini), affordability scoring, EMI comparison |
+| [E-Commerce Recommendation System](https://github.com/rishi-1603/E-Commerce-Recommendation-System) | Product recommendations, preference analysis, preprocessing pipeline |
+| [Factory-to-Customer Shipping Route Efficiency](https://github.com/rishi-1603/Factory-to-Customer-Shipping-Route-Efficiency-Analysis-for-Nassau-Candy-Distributor) | Logistics efficiency analysis for a real distributor case |
+| [Delivery Performance & Delay Risk](https://github.com/rishi-1603/Delivery-Performance-Delay-Risk-and-Logistics-Efficiency-Analysis-in-Global-Supply-Chain-Operations) | Global supply-chain delay-risk analytics |
+| [CertiFake](https://github.com/rishi-1603/CertiFake) | Certificate verification application |
+| [DevTrack](https://github.com/rishi-1603/DevTrack) | Developer productivity tracking |
+| [JPMC Quantitative Research](https://github.com/rishi-1603/JPMC-Quantitative-Research-Virtual-Experience) | JPMorgan Chase & Co. quantitative research simulation (Forage) |
 
 ---
 
