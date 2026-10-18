@@ -66,6 +66,18 @@
 
 <!-- ========================= ABOUT ========================= -->
 
+## 📊 Portfolio at a glance — 3 analytics case studies · 450+ automated tests · live dashboards
+
+| Project | The question it answers | Headline results |
+|---|---|---|
+| 🛡️ [Zomato Refund & Fraud](https://github.com/rishi-1603/zomato-refund-fraud-analytics) | Which fraud alerts are worth making? | Alert policy nets **₹92,125** · break-even precision **28.2%** · ring analysis honest null (p=0.76) · AI investigator audited to **0 fabrications** |
+| 📊 [E-Commerce Analytics](https://github.com/rishi-1603/E_commerce-Sales-and-Data-Analytics) | What should the business do next? | Win-back **₹541/contact** · forecast challenger beats baseline by **19.8%** · NL→SQL **48.6% → 97.3%** with 0 fabrications |
+| 🏥 [HealthGuard AI](https://github.com/rishi-1603/HealthGuard-AI) | Is prevention worth funding — and is the model honest? | Targeting nets **+₹2.98L** (enroll-all loses ₹10.4L) · fairness gaps priced · validated on **real UCI patient data** |
+
+> Every number above is pinned by automated tests (CI green on every push). Synthetic data is labelled synthetic — the methods are the deliverable.
+
+---
+
 # About Me
 
 I'm **Dappu Rishi Raghukumar**, a Computer Science graduate specializing in **Data Science**, passionate about building intelligent software that transforms data into meaningful business outcomes.
@@ -530,11 +542,14 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://zomato-refund-fraud-analytics-3xu24nq5hwbml78hkyirje.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/zomato-refund-fraud-analytics |
 | **Stack** | Python · Pandas · Scikit-learn · Streamlit · Plotly · SQL |
-| **Tests** | 70 automated tests · CI green |
+| **Tests** | **136 automated tests · CI green** |
 
 - Built a 4-signal refund-abuse risk score across **45,584 delivery orders**, flagging 279 customers holding **38.78% of refund exposure** — validated against recovered ground truth at **100% top-tier precision, 0.94 in-pool AUC**.
 - Quantified a **56% coverage gap** in the eligibility funnel and identified **113 flags (40.5%) as false-positive candidates** via volume-band baseline normalization.
 - Reconciled all 8 headline KPIs across independent Python and SQL implementations with **zero discrepancies**; stress-tested score weights (Spearman ρ > 0.95 under all alternatives).
+- **Alert economics (decision layer):** priced every alert policy — High+Medium tiers net **₹92,125 (ROI 3.06)**; alerting everyone nets **₹27k less**; **break-even precision 28.2%** turns the score into a budget rule.
+- **Fraud-ring network analysis with a permutation test → honest null (p = 0.76):** the signal is individual-level, not organized rings; a density screen catches the real excess (+12.8pp refund rate).
+- **AI investigator hallucination audit: 6/6 grounded · 6/6 correct refusals · 0 fabrications** — every number verified by recomputation from raw data. Plus a weekly PSI drift console whose tripwire is proven on injected AND real data.
 - **Honest by design:** a risk score is not proof of fraud — false positives are published, not hidden.
 
 </details>
@@ -552,12 +567,14 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://ecomanalytics-dashboard.vercel.app/ |
 | **Repo** | https://github.com/rishi-1603/E_commerce-Sales-and-Data-Analytics |
 | **Stack** | Python · PostgreSQL · SQL · Scikit-learn · Holt-Winters · Chart.js |
-| **Tests** | 60 automated tests · CI green |
+| **Tests** | **182 automated tests · CI green** |
 
 - End-to-end product over **12,000 orders / 1,991 customers / 150 SKUs**: RFM + K-Means, cohort retention, BCG matrix, CLV, forecasting with bootstrap CIs — 60 tests pin every dashboard figure to the pipeline.
 - Rebuilt the churn model to be **leakage-free** (forward-time split, label = no purchase in next 180 days) after catching the original target leakage — the honest 5-fold CV AUC is **0.65**, backed by a gains/lift chart for campaign targeting.
 - Decision layer: MoM decomposition (Dec 2024: revenue **+17.0%**, orders **+21.3%**, AOV **−3.5%** → volume-led growth), 18-cohort retention (month-1: 15–28% in 2023 → 55–88% late 2024), and a statistically powered win-back experiment design (MDE +13pp on a 34.5% baseline).
-- NL-to-SQL assistant where **the LLM never computes numbers** — results come from the database only.
+- NL-to-SQL assistant where **the LLM never computes numbers** — results come from the database only; a 37-question benchmark drove accuracy **48.6% → 97.3%** with **0 fabricated answers** and 100% refusal correctness.
+- **Pricing & campaign economics:** discount break-even analysis (**+10.6% → +59.2%** volume needed at 5–20% off; measured response ≈ zero) and win-back economics at **₹541 expected profit per contact** (₹2.42L pool; break-even churn 12.89% == the churn model's own Bayes threshold).
+- **Forecast challenger:** `holt_linear` at **MASE 0.375 — 19.8% better** than the shipped drift baseline; the underperforming ensemble stays on record (honest negative results).
 
 </details>
 
@@ -574,12 +591,14 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
 | **Stack** | Python · Scikit-learn · SHAP · Streamlit · Docker · CI |
-| **Tests** | 44 automated tests · CI green |
+| **Tests** | **132 automated tests · CI green** |
 
 - Readmission-risk pipeline over 984 patient records with **per-patient SHAP explanations in the UI**, cohort-level driver analysis, and fairness slices by age group and gender.
 - **The honesty audit is the headline:** the model reports AUC 0.994 — and a model card + audit prove a lookup-table baseline already scores 0.929 (demographics-only: 0.985), because the synthetic generator makes the label near-deterministic. Real clinical models score 0.65–0.75, and every surface says so.
 - Grounded Q&A where every numeric answer is computed from the dataset and CI-tested — unknown questions are refused, not guessed.
 - Operational finding framed honestly: readmitted patients hold **43.8% of total cost** at a +112% cost premium — association, not causation.
+- **Intervention economics (program simulator):** blanket enrollment **loses ₹10.39L**; targeted top-quartile enrollment **nets +₹2.98L** at break-even efficacy just 15.6% — the targeting decision is worth more than the model.
+- **Fairness trade-off priced:** gender TPR gap 0.059 → 0.001 across mitigations with the accuracy cost disclosed (Δrecall −2.65pp), the impossibility result pinned as a test, and the methods re-validated on **real UCI patients (303 rows)**.
 
 </details>
 
@@ -981,3 +1000,4 @@ interests:
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:4B0082,25:5D3FD3,50:6A5ACD,75:7B68EE,100:8A2BE2"/>
 
 </p>
+
