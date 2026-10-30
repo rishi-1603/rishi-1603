@@ -542,7 +542,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://zomato-refund-fraud-analytics-3xu24nq5hwbml78hkyirje.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/zomato-refund-fraud-analytics |
 | **Stack** | Python · Pandas · Scikit-learn · Streamlit · Plotly · SQL |
-| **Tests** | **136 automated tests · CI green** |
+| **Tests** | **141 automated tests · CI green** |
 
 - Built a 4-signal refund-abuse risk score across **45,584 delivery orders**, flagging 279 customers holding **38.78% of refund exposure** — validated against recovered ground truth at **100% top-tier precision, 0.94 in-pool AUC**.
 - Quantified a **56% coverage gap** in the eligibility funnel and identified **113 flags (40.5%) as false-positive candidates** via volume-band baseline normalization.
@@ -567,7 +567,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://ecomanalytics-dashboard.vercel.app/ |
 | **Repo** | https://github.com/rishi-1603/E_commerce-Sales-and-Data-Analytics |
 | **Stack** | Python · PostgreSQL · SQL · Scikit-learn · Holt-Winters · Chart.js |
-| **Tests** | **182 automated tests · CI green** |
+| **Tests** | **197 automated tests · CI green** |
 
 - End-to-end product over **12,000 orders / 1,991 customers / 150 SKUs**: RFM + K-Means, cohort retention, BCG matrix, CLV, forecasting with bootstrap CIs — 60 tests pin every dashboard figure to the pipeline.
 - Rebuilt the churn model to be **leakage-free** (forward-time split, label = no purchase in next 180 days) after catching the original target leakage — the honest 5-fold CV AUC is **0.65**, backed by a gains/lift chart for campaign targeting.
@@ -591,7 +591,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
 | **Stack** | Python · Scikit-learn · SHAP · Streamlit · Docker · CI |
-| **Tests** | **132 automated tests · CI green** |
+| **Tests** | **133 automated tests · CI green** |
 
 - Readmission-risk pipeline over 984 patient records with **per-patient SHAP explanations in the UI**, cohort-level driver analysis, and fairness slices by age group and gender.
 - **The honesty audit is the headline:** the model reports AUC 0.994 — and a model card + audit prove a lookup-table baseline already scores 0.929 (demographics-only: 0.985), because the synthetic generator makes the label near-deterministic. Real clinical models score 0.65–0.75, and every surface says so.
