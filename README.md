@@ -542,7 +542,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://zomato-refund-fraud-analytics-3xu24nq5hwbml78hkyirje.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/zomato-refund-fraud-analytics |
 | **Stack** | Python · Pandas · Scikit-learn · Streamlit · Plotly · SQL |
-| **Tests** | **141 automated tests · CI green** |
+| **Tests** | **142 automated tests · CI green** |
 
 - Built a 4-signal refund-abuse risk score across **45,584 delivery orders**, flagging 279 customers holding **38.78% of refund exposure** — validated against recovered ground truth at **100% top-tier precision, 0.94 in-pool AUC**.
 - Quantified a **56% coverage gap** in the eligibility funnel and identified **113 flags (40.5%) as false-positive candidates** via volume-band baseline normalization.
