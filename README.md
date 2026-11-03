@@ -591,7 +591,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
 | **Stack** | Python · Scikit-learn · SHAP · Streamlit · Docker · CI |
-| **Tests** | **133 automated tests · CI green** |
+| **Tests** | **214 automated tests · CI green** |
 
 - Readmission-risk pipeline over 984 patient records with **per-patient SHAP explanations in the UI**, cohort-level driver analysis, and fairness slices by age group and gender.
 - **The honesty audit is the headline:** the model reports AUC 0.994 — and a model card + audit prove a lookup-table baseline already scores 0.929 (demographics-only: 0.985), because the synthetic generator makes the label near-deterministic. Real clinical models score 0.65–0.75, and every surface says so.
