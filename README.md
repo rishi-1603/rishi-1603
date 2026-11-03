@@ -72,7 +72,7 @@
 |---|---|---|
 | 🛡️ [Zomato Refund & Fraud](https://github.com/rishi-1603/zomato-refund-fraud-analytics) | Which fraud alerts are worth making? | Alert policy nets **₹92,125** · break-even precision **28.2%** · ring analysis honest null (p=0.76) · AI investigator audited to **0 fabrications** |
 | 📊 [E-Commerce Analytics](https://github.com/rishi-1603/E_commerce-Sales-and-Data-Analytics) | What should the business do next? | Win-back **₹541/contact** · forecast challenger beats baseline by **19.8%** · NL→SQL **48.6% → 97.3%** with 0 fabrications |
-| 🏥 [HealthGuard AI](https://github.com/rishi-1603/HealthGuard-AI) | Is prevention worth funding — and is the model honest? | Targeting nets **+₹2.98L** (enroll-all loses ₹10.4L) · fairness gaps priced · validated on **real UCI patient data** |
+| 🏥 [HealthGuard AI](https://github.com/rishi-1603/HealthGuard-AI) | How can an analyst validate and explain outcome and cost comparisons? | Synthetic cohort analysis · scoped SQL/Python reconciliation · reproducible stakeholder reports · bounded AI assistance |
 
 > Every number above is pinned by automated tests (CI green on every push). Synthetic data is labelled synthetic — the methods are the deliverable.
 
@@ -582,23 +582,23 @@ Built scalable data applications with interactive user interfaces and AI capabil
 
 <details open>
 
-<summary><h2>🏥 HealthGuard AI — explainable healthcare analytics with model-honesty audit</h2></summary>
+<summary><h2>🏥 HealthGuard AI — outcomes analytics and analyst workbench</h2></summary>
 
-**The question:** which patients are at higher risk, why — and can the model's headline metric be trusted at all?
+**The question:** where are recorded costs and outcomes concentrated, and which comparisons need further investigation?
 
 | | |
 |---|---|
 | **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
-| **Stack** | Python · Scikit-learn · SHAP · Streamlit · Docker · CI |
-| **Tests** | **214 automated tests · CI green** |
+| **Stack** | Python · pandas · SQLite · Streamlit · SQL · SHAP |
+| **Tests** | **250 automated tests · CI green** |
 
-- Readmission-risk pipeline over 984 patient records with **per-patient SHAP explanations in the UI**, cohort-level driver analysis, and fairness slices by age group and gender.
-- **The honesty audit is the headline:** the model reports AUC 0.994 — and a model card + audit prove a lookup-table baseline already scores 0.929 (demographics-only: 0.985), because the synthetic generator makes the label near-deterministic. Real clinical models score 0.65–0.75, and every surface says so.
-- Grounded Q&A where every numeric answer is computed from the dataset and CI-tested — unknown questions are refused, not guessed.
-- Operational finding framed honestly: readmitted patients hold **43.8% of total cost** at a +112% cost premium — association, not causation.
-- **Intervention economics (program simulator):** blanket enrollment **loses ₹10.39L**; targeted top-quartile enrollment **nets +₹2.98L** at break-even efficacy just 15.6% — the targeting decision is worth more than the model.
-- **Fairness trade-off priced:** gender TPR gap 0.059 → 0.001 across mitigations with the accuracy cost disclosed (Δrecall −2.65pp), the impossibility result pinned as a test, and the methods re-validated on **real UCI patients (303 rows)**.
+- Built a workbench to check data quality, compare a filtered cohort with the labelled full reference, run scoped SQL reconciled in pandas, and export a stakeholder snapshot.
+- In 984 synthetic records, 264 were marked readmitted and accounted for 43.8% of recorded cost. The 112.3% mean cost difference is an unadjusted association—not a causal saving.
+- Built bounded analytical Q&A with calculation evidence and optional Gemini selection of precomputed facts; unsupported clinical or unavailable-data requests are refused.
+- Evaluated the model against a condition-only baseline and documented why the synthetic AUC does not establish clinical performance. A separate UCI heart-disease exercise has a different endpoint; it does not validate readmission predictions.
+
+**Scope:** Synthetic demonstration; not for clinical decisions. Financial simulations are assumptions, not measured hospital outcomes.
 
 </details>
 
