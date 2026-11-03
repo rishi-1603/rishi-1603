@@ -591,7 +591,7 @@ Built scalable data applications with interactive user interfaces and AI capabil
 | **Live** | https://healthguard-ai-cyl2viwrsdrrff7pig7u6c.streamlit.app/ |
 | **Repo** | https://github.com/rishi-1603/HealthGuard-AI |
 | **Stack** | Python · pandas · SQLite · Streamlit · SQL · SHAP |
-| **Tests** | **256 automated tests · CI green** |
+| **Tests** | **257 automated tests · CI green** |
 
 - Built a workbench to check data quality, compare a filtered cohort with the labelled full reference, run scoped SQL reconciled in pandas, and export a stakeholder snapshot.
 - In 984 synthetic records, 264 were marked readmitted and accounted for 43.8% of recorded cost. The 112.3% mean cost difference is an unadjusted association—not a causal saving.
